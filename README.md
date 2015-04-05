@@ -31,10 +31,16 @@ cli
 .add('--hello', 'Write a simple Hello word', function(){
   console.log("Hello the world!!");
 })
-.prompt('--hellowho', 'write hello with name')
+.add('-b', 'shorcut for say bye', function(data){
+  console.log("Bye Bye!!", data);
+})
+.prompt('--hellowho', 'what is your name')
+.prompt('--country', 'where do you come from?')
 .process(function(data){
-  cli.notice("Hello " + data[0])
-  cli.notice("You are " + data[1])
+  if (data[0])
+    cli.notice("Hello " + data[0])
+  if (data[1])
+    cli.notice("You are from " + data[1])
 });
 
 process.on('SIGINT', function () {
@@ -47,7 +53,7 @@ On terminal
 
 ``` $ ./bin/first.js --hello ```
 
-``` $ ./bin/first.js --hellowho ```
+``` $ ./bin/first.js --hellowho --country -b Mike ```
 
 
 
