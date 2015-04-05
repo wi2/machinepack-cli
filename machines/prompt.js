@@ -26,7 +26,7 @@ module.exports = {
   },
 
   fn: function (inputs,exits) {
-    return exits.success(require('../lib/cli.js')(inputs.options||null));
+    return exits.success(require('../lib/cli.js')(inputs));
   },
 
 };
