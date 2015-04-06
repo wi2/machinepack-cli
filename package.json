@@ -1,6 +1,6 @@
 {
   "name": "machinepack-cli",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Simple Maker command line interface",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
