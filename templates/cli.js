@@ -3,12 +3,12 @@
 var cli = require('machinepack-cli').prompt().execSync();
 
 cli
-.add('-l', 'declare_something_for_help', function(result){})
-.prompt('-p', 'declare_what_you_want', function(){});
-.add('--long', 'declare_something_for_help', function(result){})
-.prompt('--ppp', 'declare_what_you_want', function(){});
+.add('-helloworld', 'Hello the world!', function(result){})
+.prompt('-hello', 'what is your name?', function(){})
 
 .process(function(result){
+  cli.result("Hello " + result["-hello"] + "!");
+
   cli.notice("The results");
   console.log(result);
 });

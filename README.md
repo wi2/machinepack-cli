@@ -11,50 +11,30 @@ Simple command line interface
 ## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-cli.svg)](http://badge.fury.io/js/machinepack-cli) [![Build Status](https://travis-ci.org/wi2/machinepack-cli.png?branch=master)](https://travis-ci.org/wi2/machinepack-cli)
 
 ```sh
-$ npm install machinepack-cli
+$ npm install -g machinepack-cli
 ```
+maybe with sudo if error
+
 
 ## Usage
 
-Create a file in folder, e.g. /bin/file.js
+```
+$ cli --help
+
+$ cli --generate file
+
+$ cli file --function param param -other_function -other
 
 ```
-chmod u+x bin/file.js
-```
+Generate a file in bin folder
 
-in bin/file.js
-```
-#!/usr/bin/env node
+``` $ cli file --hello ```
+ or
 
-var cli = require('machinepack-cli').prompt({debug: true}).execSync();
-cli
-.add('--hello', 'Write a simple Hello word', function(){
-  console.log("Hello the world!!");
-})
-.add('-b', 'shorcut for say bye', function(data){
-  console.log("Bye Bye!!", data);
-})
-.prompt('--hellowho', 'what is your name')
-.prompt('--country', 'where do you come from?')
-.process(function(data){
-  if (data[0])
-    cli.notice("Hello " + data[0])
-  if (data[1])
-    cli.notice("You are from " + data[1])
-});
+``` $ ./bin/file.js --hello ```
 
-process.on('SIGINT', function () {
-  cli.error('Got a SIGINT. Goodbye cruel world');
-  process.exit(0);
-});
 
-```
-On terminal
-
-``` $ ./bin/first.js --hello ```
-
-``` $ ./bin/first.js --hellowho --country -b Mike ```
-
+``` $ cli file --help ```
 
 
 
