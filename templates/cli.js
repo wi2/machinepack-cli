@@ -12,7 +12,3 @@ cli
   cli.notice("The results");
   console.log(result);
 });
-
-
-//USAGE
-// $ ./bin/file.js -l -p --ppp

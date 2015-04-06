@@ -2,7 +2,7 @@ module.exports = {
 
   friendlyName: 'Prompt',
   description: 'Simple prompt',
-  extendedDescription: '',
+  extendedDescription: 'See README.md',
 
   sync: true,
 
