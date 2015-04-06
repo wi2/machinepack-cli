@@ -19,4 +19,9 @@ cli
 });
 
 
+// USAGE
+// $ ./bin/example.js --less 22 6 7 --plus 5 5
+//
+// ./bin/example.js -+ -+ -+
+
 
