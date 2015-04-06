@@ -1,13 +1,18 @@
 #!/usr/bin/env node
 
-require('machinepack-cli').prompt().execSync()
+var cli = require('machinepack-cli').prompt().execSync();
+
+cli
 .add('-l', 'declare_something_for_help', function(result){})
-.prompt('-l', 'declare_what_you_want', function(result){})
+.prompt('-p', 'declare_what_you_want', function(){});
+.add('--long', 'declare_something_for_help', function(result){})
+.prompt('--ppp', 'declare_what_you_want', function(){});
 
-
-process.on('SIGINT', function () {
-  cli.error('Got a SIGINT. Goodbye cruel world');
-  process.exit(0);
+.process(function(result){
+  cli.notice("The results");
+  console.log(result);
 });
 
 
+//USAGE
+// $ ./bin/file.js -l -p --ppp
