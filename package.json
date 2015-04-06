@@ -5,6 +5,10 @@
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
+  "preferGlobal": "true",
+  "bin": {
+    "cli": "./bin/cli.js"
+  },
   "keywords": [
     "Cli",
     "Command line interface",

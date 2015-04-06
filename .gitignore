@@ -35,4 +35,6 @@ coverage
 # Bin
 ############################
 bin/first.js
+bin/test.js
+
 

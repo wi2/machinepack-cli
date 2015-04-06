@@ -11,12 +11,7 @@ cli
 })
 .prompt('-+', 'addition with prompt')
 
-.process(function(result){
-  cli.warn(result['--less']);
-
-  if (result.length)
-    cli.notice(result.reduce(function(o,v){return +o + +v}));
-});
+.process(function(result){return result;});
 
 
 // USAGE

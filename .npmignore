@@ -18,3 +18,5 @@ CONTRIBUTING.md
 *.md
 **/*.md
 test
+bin/first.js
+bin/test.js
