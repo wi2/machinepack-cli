@@ -2,22 +2,7 @@ module.exports = {
 
   friendlyName: 'Prompt',
   description: 'Simple prompt',
-  extendedDescription: " ## Install "
-+ " ``` "
-+ " $ npm install -g machinepack-cli "
-+ " ``` "
-+ " (with sudo if error)"
-+ "  "
-+ " ## Usage "
-+ " ``` "
-+ " $ cli --help"
-+ " $ cli --generate file "
-+ " ``` "
-+ " Generate a file in bin folder "
-+ " ``` "
-+ " $ cli file --hello "
-+ " $ cli file --help "
-+ " ``` ",
+  extendedDescription: "See https://github.com/wi2/machinepack-cli/blob/master/README.md",
 
   sync: true,
 
