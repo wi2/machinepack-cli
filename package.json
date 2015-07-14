@@ -1,6 +1,6 @@
 {
   "name": "machinepack-cli",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Simple Maker command line interface",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
@@ -18,12 +18,12 @@
   "author": "wi2",
   "license": "MIT",
   "dependencies": {
-    "cli-color": "^0.3.3",
-    "fs-extra": "^0.18.0",
-    "machine": "^3.0.0"
+    "cli-color": "^1.0.0",
+    "fs-extra": "^0.22.1",
+    "machine": "^10.4.0"
   },
   "devDependencies": {
-    "test-machinepack-mocha": "^0.2.2"
+    "test-machinepack-mocha": "^2.1.1"
   },
   "machinepack": {
     "friendlyName": "Cli",
